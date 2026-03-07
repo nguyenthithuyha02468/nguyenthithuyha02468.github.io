@@ -1,303 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta charset="UTF-8">
 <title>Mai Hoa Nguyen</title>
 
 <style>
 
 body{
-margin:0;
-font-family: Arial;
-background:#f6e6f2;
+    margin:0;
+    font-family: Arial;
+    background:#ffd6e7;
+    scroll-behavior:smooth;
 }
 
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#d7b6f5;
-padding:15px 40px;
-font-weight:bold;
+header{
+    background:#d81b60;
+    padding:15px;
+    position:fixed;
+    width:100%;
+    top:0;
 }
 
-.navbar a{
-text-decoration:none;
-color:black;
-margin-left:25px;
+nav{
+    text-align:center;
 }
 
-/* CONTAINER */
-
-.container{
-width:900px;
-margin:auto;
-margin-top:40px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:20px;
+    font-weight:bold;
 }
 
-/* CARD */
+nav a:hover{
+    color:#ffe4ec;
+}
+
+section{
+    padding:100px 40px;
+    min-height:100vh;
+}
+
+h1{
+    color:#c2185b;
+}
+
+h2{
+    color:#c2185b;
+}
 
 .card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:6px 6px 0px black;
-margin-bottom:40px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin:20px 0;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* PROFILE */
-
-.profile{
-display:flex;
-align-items:center;
+img{
+    width:200px;
+    border-radius:15px;
+    margin:10px;
+    transition:0.3s;
 }
 
-.profile img{
-width:140px;
-border-radius:50%;
-margin-right:30px;
+img:hover{
+    transform:scale(1.1);
 }
 
-.button{
-border:2px solid black;
-padding:8px 20px;
-border-radius:20px;
-margin-right:10px;
-background:white;
-display:inline-block;
-}
-
-/* SECTION TITLE */
-
-.title{
-text-align:center;
-margin-bottom:20px;
-}
-
-.title span{
-border:2px solid black;
-padding:8px 20px;
-border-radius:20px;
-font-weight:bold;
-background:white;
-}
-
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.project-card{
-background:#f8f0ff;
-padding:20px;
-border-radius:20px;
-box-shadow:6px 6px 0px black;
-}
-
-/* SKILLS */
-
-.skill-grid{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:20px;
-}
-
-.skill-card{
-padding:20px;
-border-radius:20px;
-background:white;
-box-shadow:6px 6px 0px black;
-}
-
-/* CONTACT */
-
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:20px;
-}
-
-.contact-card{
-padding:20px;
-border-radius:20px;
-background:white;
-box-shadow:6px 6px 0px black;
-}
-
-footer{
-text-align:center;
-margin:40px;
-color:#b48ad6;
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<header>
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#hobbies">Hobbies</a>
+<a href="#idol">Idol</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-<div class="navbar">
-
-<div><b>Mai Hoa Nguyen</b></div>
-
-<div>
-<a href="#">About</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
-</div>
-
-</div>
-
-<div class="container">
-
-<!-- PROFILE -->
-
-<div class="card profile">
-
-<img src="profile.png">
-
-<div>
+<section id="about">
 
 <h1>Mai Hoa Nguyen</h1>
 
-<p>Student · International Economics · Foreign Trade University</p>
-
-<div class="button">Email</div>
-<div class="button">Projects</div>
-<div class="button">Contact</div>
-
-</div>
-
-</div>
-
-<!-- ABOUT -->
-
 <div class="card">
-
-<div class="title">
-<span>About Me</span>
-</div>
-
 <p>
 A responsible and analytical student with a strong interest in scientific research.
 Skilled in problem-solving, critical thinking, and teamwork.
-Eager to apply mathematical and economic knowledge to research projects and real-world applications.
+Eager to apply mathematical and economic knowledge to research projects.
 </p>
-
 </div>
 
-<!-- EXPERIENCE -->
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
 
 <div class="card">
-
-<div class="title">
-<span>Experience & Projects</span>
-</div>
-
-<div class="grid">
-
-<div class="project-card">
-
-<h3>Global Economic Club (GEC)</h3>
-
 <p>
-Member of Research Department (2024–Present).
-Participated in research activities and data analysis.
+My academic interests include mathematics, economics, and research-based learning.
+I enjoy exploring analytical problems and developing creative solutions.
 </p>
-
 </div>
 
-<div class="project-card">
+</section>
 
-<h3>PEA Organization</h3>
+<section id="hobbies">
 
-<p>
-Human Resources Department (2022–2023).
-Supported recruitment and team coordination.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- SKILLS -->
+<h2>Hobbies</h2>
 
 <div class="card">
-
-<div class="title">
-<span>Skills & Certificates</span>
+<ul>
+<li>Listening to music</li>
+<li>Watching memes</li>
+<li>Reading about science</li>
+<li>Exploring new ideas</li>
+</ul>
 </div>
 
-<div class="skill-grid">
+</section>
 
-<div class="skill-card">
-<h3>Technology Skills</h3>
-<p>Excel</p>
-<p>Word</p>
-<p>PowerPoint</p>
-</div>
+<section id="idol">
 
-<div class="skill-card">
-<h3>Tools</h3>
-<p>Google Workspace</p>
-<p>Canva</p>
-</div>
-
-<div class="skill-card">
-<h3>Certificates</h3>
-<p>MOS Excel</p>
-<p>MOS Word</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- CONTACT -->
+<h2>My Idol</h2>
 
 <div class="card">
+<p>Cotis</p>
 
-<div class="title">
-<span>Contact</span>
-</div>
+<div class="gallery">
 
-<div class="contact-grid">
-
-<div class="contact-card">
-<h3>Email</h3>
-<p>nguyenthithj@gmail.com</p>
-</div>
-
-<div class="contact-card">
-<h3>LinkedIn</h3>
-<p>Your LinkedIn</p>
-</div>
-
-<div class="contact-card">
-<h3>Facebook</h3>
-<p>Your Facebook</p>
-</div>
+<img src="https://i.imgur.com/2DhmtJ4.jpg">
+<img src="https://i.imgur.com/yXOvdOS.jpg">
+<img src="https://i.imgur.com/Z6XJZ7B.jpg">
 
 </div>
 
 </div>
 
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="card">
+<p>Email: example@email.com</p>
 </div>
 
-<footer>
-
-Built by Mai Hoa Nguyen ✨
-
-</footer>
+</section>
 
 </body>
 </html>
