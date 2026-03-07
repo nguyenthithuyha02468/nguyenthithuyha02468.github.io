@@ -3,36 +3,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nguyễn Thị Thúy Hà</title>
+<title>Nguyễn Thị Thúy Hà</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-color:#333;
-scroll-behavior:smooth;
 background:#ffeaf3;
+scroll-behavior:smooth;
 overflow-x:hidden;
 }
 
-/* NƠ BAY BACKGROUND */
+/* background nơ */
 
 .bow{
 position:fixed;
 font-size:20px;
-opacity:0.5;
-animation:float 10s linear infinite;
+opacity:0.4;
+animation:float 12s linear infinite;
 }
 
 @keyframes float{
-0%{transform:translateY(100vh) rotate(0deg)}
-100%{transform:translateY(-10vh) rotate(360deg)}
+0%{transform:translateY(100vh)}
+100%{transform:translateY(-10vh)}
 }
 
-/* HEADER */
+/* header */
 
 header{
 position:fixed;
@@ -44,19 +43,23 @@ z-index:100;
 }
 
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
 max-width:1200px;
 margin:auto;
+display:flex;
+align-items:center;
+gap:20px;
 }
 
-.logo{
-font-family:'Quicksand';
-font-size:22px;
-color:white;
-font-weight:bold;
+/* name box */
+
+.namebox{
+background:white;
+padding:8px 18px;
+border-radius:20px;
+font-weight:500;
 }
+
+/* menu */
 
 nav ul{
 list-style:none;
@@ -76,7 +79,7 @@ nav a:hover{
 text-decoration:underline;
 }
 
-/* CONTENT */
+/* content */
 
 .container{
 max-width:900px;
@@ -84,9 +87,10 @@ margin:auto;
 padding-top:120px;
 }
 
+/* section */
+
 .section{
 background:white;
-border:2px solid #ffc1da;
 border-radius:14px;
 padding:30px;
 margin-bottom:35px;
@@ -94,18 +98,28 @@ box-shadow:0 6px 12px rgba(0,0,0,0.06);
 }
 
 .section h2{
-margin-top:0;
-color:#e91e63;
-border-bottom:2px solid #ffd3e6;
-padding-bottom:8px;
+text-align:center;
+color:black;
 }
 
-/* PROFILE */
+/* viền màu */
+
+.profilebox{border:2px solid #ffc9c9;}
+.edu{border:2px solid #ffe9a8;}
+.skills{border:2px solid #c8e6ff;}
+.work{border:2px solid #d6c6ff;}
+.activities{border:2px solid #ffd6ea;}
+.qualities{border:2px solid #d4ffd6;}
+.idols{border:2px solid #ffd4a8;}
+.contact{border:2px solid #bfeaff;}
+
+/* profile layout */
 
 .profile{
 display:flex;
-gap:25px;
 align-items:center;
+justify-content:space-between;
+gap:20px;
 flex-wrap:wrap;
 }
 
@@ -115,12 +129,11 @@ border-radius:50%;
 border:4px solid #ff8ec4;
 }
 
-/* SLIDER */
+/* slider */
 
 .slider{
 overflow:hidden;
-border-radius:12px;
-border:2px solid #ffc1da;
+border-radius:10px;
 }
 
 .slides{
@@ -133,16 +146,14 @@ width:100%;
 }
 
 .buttons{
-display:flex;
-justify-content:center;
-gap:10px;
+text-align:center;
 margin-top:10px;
 }
 
 button{
 background:#ff6aa8;
-color:white;
 border:none;
+color:white;
 padding:8px 14px;
 border-radius:6px;
 cursor:pointer;
@@ -158,19 +169,17 @@ background:#ff3c87;
 
 <body>
 
-<!-- NƠ BAY -->
-
 <div class="bow" style="left:10%">🎀</div>
-<div class="bow" style="left:30%;animation-delay:2s">🎀</div>
-<div class="bow" style="left:50%;animation-delay:4s">🎀</div>
-<div class="bow" style="left:70%;animation-delay:1s">🎀</div>
-<div class="bow" style="left:90%;animation-delay:3s">🎀</div>
+<div class="bow" style="left:30%;animation-delay:3s">🎀</div>
+<div class="bow" style="left:50%;animation-delay:6s">🎀</div>
+<div class="bow" style="left:70%;animation-delay:2s">🎀</div>
+<div class="bow" style="left:90%;animation-delay:5s">🎀</div>
 
 <header>
 
 <nav>
 
-<div class="logo">Nguyễn Thị Thúy Hà</div>
+<div class="namebox">Search</div>
 
 <ul>
 <li><a href="#profile">Profile</a></li>
@@ -179,7 +188,7 @@ background:#ff3c87;
 <li><a href="#work">Work</a></li>
 <li><a href="#activities">Activities</a></li>
 <li><a href="#qualities">Qualities</a></li>
-<li><a href="#idols">Idols</a></li>
+<li><a href="#idol">My Idol</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -188,13 +197,11 @@ background:#ff3c87;
 
 <div class="container">
 
-<div class="section" id="profile">
+<div class="section profilebox" id="profile">
 
-<h2>PROFILE</h2>
+<h2>👤 PROFILE</h2>
 
 <div class="profile">
-
-<img src="Screenshot 2026-01-21 151150.png">
 
 <p>
 A responsible and analytical student with a strong interest in scientific research.
@@ -202,13 +209,15 @@ Skilled in problem-solving, critical thinking, and teamwork.
 Eager to apply mathematical and economic knowledge to research projects and real-world applications.
 </p>
 
-</div>
+<img src="Screenshot 2026-01-21 151150.png">
 
 </div>
 
-<div class="section" id="education">
+</div>
 
-<h2>EDUCATION</h2>
+<div class="section edu" id="education">
+
+<h2>🎓 EDUCATION</h2>
 
 <p><b>Foreign Trade University (FTU)</b><br>
 2024 – Present<br>
@@ -219,68 +228,68 @@ Math-specialized class</p>
 
 </div>
 
-<div class="section" id="skills">
+<div class="section skills" id="skills">
 
-<h2>SKILLS</h2>
+<h2>🛠 SKILLS</h2>
 
-<p><b>Technical Skills:</b> Microsoft Office Specialists (MOS) in Microsoft Excel, Microsoft Word, Microsoft PowerPoint.</p>
+<p><b>Technical Skills:</b> Microsoft Office Specialists (MOS) in Excel, Word, PowerPoint.</p>
 
-<p><b>Soft Skills:</b> Research skills, Critical thinking, Problem-solving, Time management, Team collaboration, Communication skills.</p>
+<p><b>Soft Skills:</b> Research, Critical thinking, Problem-solving, Time management, Team collaboration.</p>
 
-<p><b>Languages:</b> Vietnamese (Native), English.</p>
+<p><b>Languages:</b> Vietnamese, English.</p>
 
 </div>
 
-<div class="section" id="work">
+<div class="section work" id="work">
 
-<h2>WORK EXPERIENCE</h2>
+<h2>💼 WORK EXPERIENCE</h2>
 
 <p><b>Maths Tutor</b></p>
 
 <ul>
-<li>1:1 teaching for different classes and ages.</li>
-<li>Customize lessons and provide academic support.</li>
+<li>1:1 teaching for different classes and ages</li>
+<li>Customize lessons and academic support</li>
 </ul>
 
 </div>
 
-<div class="section" id="activities">
+<div class="section activities" id="activities">
 
-<h2>EXTRACURRICULAR ACTIVITIES</h2>
+<h2>🌟 EXTRACURRICULAR ACTIVITIES</h2>
 
-<p><b>Global Economic Club (GEC), Foreign Trade University</b><br>
-Member of Research Department<br>
+<p><b>Global Economic Club (GEC)</b><br>
+Research Department Member<br>
 2024 – Present</p>
 
 <p><b>The PEA Organization</b><br>
-Member of Human Resources Department<br>
+HR Department Member<br>
 2022 – 2023</p>
 
 </div>
 
-<div class="section" id="qualities">
+<div class="section qualities" id="qualities">
 
-<h2>PERSONAL QUALITIES</h2>
+<h2>💎 PERSONAL QUALITIES</h2>
 
 <ul>
-<li>Highly enthusiastic and dedicated to delivering quality.</li>
-<li>Detail-oriented, careful, and responsible under pressure.</li>
-<li>Enjoy working with data and numbers.</li>
+<li>Highly enthusiastic and dedicated</li>
+<li>Detail-oriented and responsible</li>
+<li>Enjoy working with data and numbers</li>
 </ul>
 
 </div>
 
-<div class="section" id="idols">
+<div class="section idols" id="idol">
 
-<h2>MY IDOLS</h2>
+<h2>🎤 MY IDOL</h2>
 
 <div class="slider">
 
 <div class="slides" id="slide">
 
-<img src="cortis1.png">
-<img src="cortis2.png">
-<img src="cortis3.png">
+<img src="cortis1.jpg">
+<img src="cortis2.jpg">
+<img src="cortis3.jpg">
 
 </div>
 
@@ -293,9 +302,9 @@ Member of Human Resources Department<br>
 
 </div>
 
-<div class="section" id="contact">
+<div class="section contact" id="contact">
 
-<h2>CONTACT</h2>
+<h2>📞 CONTACT</h2>
 
 <p>Email: nguyenthithuyha02468@gmail.com</p>
 <p>Phone: xxxxxxxxxxx</p>
