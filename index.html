@@ -3,128 +3,125 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nguyễn Thị Thúy Hà</title>
+<title>Nguyễn Thị Thúy Hà</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
+background:#ffeaf3;
 font-family:'Poppins',sans-serif;
 color:#333;
-overflow-x:hidden;
-
-/* nền hồng chuyển động */
-background:linear-gradient(-45deg,#ff9ecb,#ffc0db,#ff8ab5,#ffd6ea);
-background-size:400% 400%;
-animation:gradientBG 10s ease infinite;
+scroll-behavior:smooth;
 }
 
-@keyframes gradientBG{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
+/* TOP BAR */
 
 header{
 position:fixed;
 top:0;
 width:100%;
-background:#d81b60;
+background:linear-gradient(90deg,#ff5c9c,#ff8ec4);
 padding:15px;
-z-index:10;
-text-align:center;
+z-index:100;
 }
 
-nav a{
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+font-family:'Quicksand',sans-serif;
+font-size:22px;
 color:white;
-margin:15px;
-font-size:18px;
 font-weight:bold;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:18px;
+margin:0;
+padding:0;
+}
+
+nav ul li a{
+color:white;
 text-decoration:none;
+font-size:14px;
+font-weight:500;
 }
 
-nav a:hover{
-color:#ffd6ea;
+nav ul li a:hover{
+text-decoration:underline;
 }
 
-section{
-padding:120px 40px;
-min-height:100vh;
+/* CONTENT */
+
+.container{
+max-width:900px;
+margin:auto;
+padding-top:120px;
 }
 
-h1,h2{
-font-family:'Pacifico',cursive;
-color:#c2185b;
-}
-
-.card{
+.section{
 background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-margin-top:20px;
+border:2px solid #ffc1da;
+border-radius:14px;
+padding:30px;
+margin-bottom:35px;
+box-shadow:0 6px 12px rgba(0,0,0,0.06);
 }
 
-/* trái tim bay */
-
-.heart{
-position:fixed;
-bottom:-20px;
-font-size:20px;
-animation:floatUp 6s linear infinite;
-color:#ff4d88;
+.section h2{
+margin-top:0;
+color:#e91e63;
+border-bottom:2px solid #ffd3e6;
+padding-bottom:8px;
 }
 
-@keyframes floatUp{
-0%{
-transform:translateY(0);
-opacity:1;
-}
-100%{
-transform:translateY(-100vh);
-opacity:0;
-}
-}
-
-/* gallery slide */
+/* IDOL SLIDER */
 
 .slider{
-width:300px;
+position:relative;
 overflow:hidden;
-margin:auto;
-border-radius:15px;
+border-radius:12px;
+border:2px solid #ffc1da;
 }
 
 .slides{
 display:flex;
-animation:slide 9s infinite;
+transition:0.5s;
 }
 
 .slides img{
-width:300px;
+width:100%;
 }
 
-@keyframes slide{
-0%{transform:translateX(0)}
-33%{transform:translateX(-300px)}
-66%{transform:translateX(-600px)}
-100%{transform:translateX(0)}
+.buttons{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:10px;
 }
 
-/* meme */
-
-.meme{
-width:200px;
-margin:20px;
-border-radius:15px;
-animation:bounce 2s infinite;
+.buttons button{
+background:#ff6aa8;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
 }
 
-@keyframes bounce{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
+.buttons button:hover{
+background:#ff3c87;
 }
 
 </style>
@@ -135,79 +132,147 @@ animation:bounce 2s infinite;
 
 <header>
 <nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#hobbies">Hobbies</a>
-<a href="#idol">Idol</a>
+
+<div class="logo">Nguyễn Thị Thúy Hà</div>
+
+<ul>
+<li><a href="#profile">Profile</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#activities">Activities</a></li>
+<li><a href="#qualities">Qualities</a></li>
+<li><a href="#idols">Idols</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 </nav>
 </header>
 
-<section id="about">
+<div class="container">
 
-<h1>Nguyễn Thị Thúy Hà</h1>
-
-<div class="card">
+<div class="section" id="profile">
+<h2>PROFILE</h2>
+<p>
 A responsible and analytical student with a strong interest in scientific research.
 Skilled in problem-solving, critical thinking, and teamwork.
-Eager to apply mathematical and economic knowledge to research projects.
+Eager to apply mathematical and economic knowledge to research projects and real-world applications.
+</p>
 </div>
 
-</section>
+<div class="section" id="education">
+<h2>EDUCATION</h2>
 
-<section id="projects">
+<p><b>Foreign Trade University (FTU)</b><br>
+2024 – Present<br>
+Sophomore in International Economics</p>
 
-<h2>Projects</h2>
+<p><b>Ha Tinh High School for the Gifted</b><br>
+Math-specialized class</p>
 
-<div class="card">
-I enjoy exploring analytical problems and research related to mathematics and economics.
 </div>
 
-</section>
+<div class="section" id="skills">
+<h2>SKILLS</h2>
 
-<section id="hobbies">
+<p><b>Technical Skills:</b> Microsoft Office Specialists (MOS) in Microsoft Excel, Microsoft Word, Microsoft PowerPoint.</p>
 
-<h2>Hobbies</h2>
+<p><b>Soft Skills:</b> Research skills, Critical thinking, Problem-solving, Time management, Team collaboration, Communication skills.</p>
 
-<div class="card">
+<p><b>Languages:</b> Vietnamese (Native), English.</p>
+
+</div>
+
+<div class="section" id="work">
+<h2>WORK EXPERIENCE</h2>
+
+<p><b>Maths Tutor</b></p>
 
 <ul>
-<li>Listening to music</li>
-<li>Watching memes</li>
-<li>Reading science topics</li>
-<li>Exploring ideas</li>
+<li>1:1 teaching for different classes and ages.</li>
+<li>Customize lessons and provide academic support.</li>
 </ul>
 
-<img class="meme" src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+</div>
+
+<div class="section" id="activities">
+<h2>EXTRACURRICULAR ACTIVITIES</h2>
+
+<p><b>Global Economic Club (GEC), Foreign Trade University</b><br>
+Member of Research Department<br>
+2024 – Present</p>
+
+<p><b>The PEA Organization</b><br>
+Member of Human Resources Department<br>
+2022 – 2023</p>
 
 </div>
 
-</section>
+<div class="section" id="qualities">
+<h2>PERSONAL QUALITIES</h2>
 
-<section id="idol">
+<ul>
+<li>Highly enthusiastic and dedicated to delivering quality.</li>
+<li>Detail-oriented, careful, and responsible under pressure.</li>
+<li>Enjoy working with data and numbers.</li>
+</ul>
 
-<h2>My Idol - Cotis</h2>
+</div>
 
-<div class="card">
+<div class="section" id="idols">
+<h2>MY IDOLS</h2>
 
 <div class="slider">
-<div class="slides">
-<img src="https://picsum.photos/300/200?1">
-<img src="https://picsum.photos/300/200?2">
-<img src="https://picsum.photos/300/200?3">
-</div>
-</div>
+
+<div class="slides" id="slide">
+
+<img src="https://picsum.photos/900/400?1">
+<img src="https://picsum.photos/900/400?2">
+<img src="https://picsum.photos/900/400?3">
 
 </div>
 
-</section>
+</div>
 
-<!-- trái tim -->
+<div class="buttons">
+<button onclick="prev()">Prev</button>
+<button onclick="next()">Next</button>
+</div>
 
-<div class="heart" style="left:10%">💗</div>
-<div class="heart" style="left:30%;animation-delay:2s">💗</div>
-<div class="heart" style="left:50%;animation-delay:4s">💗</div>
-<div class="heart" style="left:70%;animation-delay:1s">💗</div>
-<div class="heart" style="left:90%;animation-delay:3s">💗</div>
+</div>
+
+<div class="section" id="contact">
+<h2>CONTACT</h2>
+
+<p>Email: nguyenthithuyha02468@gmail.com</p>
+<p>Phone: xxxxxxxxxxx</p>
+
+</div>
+
+</div>
+
+<script>
+
+let index=0
+const slide=document.getElementById("slide")
+
+function show(){
+slide.style.transform="translateX("+(-index*100)+"%)"
+}
+
+function next(){
+index++
+if(index>2) index=0
+show()
+}
+
+function prev(){
+index--
+if(index<0) index=2
+show()
+}
+
+</script>
 
 </body>
 </html>
