@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>Nguyễn Thị Thúy Hà</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,11 +13,10 @@ body{
 margin:0;
 background:#ffeaf3;
 font-family:'Poppins',sans-serif;
-color:#333;
 scroll-behavior:smooth;
 }
 
-/* TOP BAR */
+/* HEADER */
 
 header{
 position:fixed;
@@ -29,36 +28,34 @@ z-index:100;
 }
 
 nav{
+max-width:1100px;
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-max-width:1200px;
-margin:auto;
 }
 
 .logo{
-font-family:'Quicksand',sans-serif;
-font-size:22px;
 color:white;
 font-weight:bold;
+font-size:20px;
 }
 
 nav ul{
-list-style:none;
 display:flex;
 gap:18px;
+list-style:none;
 margin:0;
 padding:0;
 }
 
-nav ul li a{
+nav a{
 color:white;
 text-decoration:none;
 font-size:14px;
-font-weight:500;
 }
 
-nav ul li a:hover{
+nav a:hover{
 text-decoration:underline;
 }
 
@@ -76,20 +73,34 @@ border:2px solid #ffc1da;
 border-radius:14px;
 padding:30px;
 margin-bottom:35px;
-box-shadow:0 6px 12px rgba(0,0,0,0.06);
+box-shadow:0 5px 10px rgba(0,0,0,0.05);
 }
 
 .section h2{
 margin-top:0;
 color:#e91e63;
 border-bottom:2px solid #ffd3e6;
-padding-bottom:8px;
+padding-bottom:6px;
 }
 
-/* IDOL SLIDER */
+/* PROFILE */
+
+.profile{
+display:flex;
+gap:25px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.profile img{
+width:180px;
+border-radius:20px;
+border:3px solid #ffc1da;
+}
+
+/* SLIDER */
 
 .slider{
-position:relative;
 overflow:hidden;
 border-radius:12px;
 border:2px solid #ffc1da;
@@ -105,22 +116,21 @@ width:100%;
 }
 
 .buttons{
-display:flex;
-justify-content:center;
-gap:10px;
+text-align:center;
 margin-top:10px;
 }
 
-.buttons button{
+button{
 background:#ff6aa8;
 color:white;
 border:none;
 padding:8px 14px;
 border-radius:6px;
 cursor:pointer;
+margin:5px;
 }
 
-.buttons button:hover{
+button:hover{
 background:#ff3c87;
 }
 
@@ -131,6 +141,7 @@ background:#ff3c87;
 <body>
 
 <header>
+
 <nav>
 
 <div class="logo">Nguyễn Thị Thúy Hà</div>
@@ -147,20 +158,31 @@ background:#ff3c87;
 </ul>
 
 </nav>
+
 </header>
 
 <div class="container">
 
 <div class="section" id="profile">
+
 <h2>PROFILE</h2>
+
+<div class="profile">
+
+<img src="Screenshot 2026-01-21 151150.png">
+
 <p>
 A responsible and analytical student with a strong interest in scientific research.
 Skilled in problem-solving, critical thinking, and teamwork.
 Eager to apply mathematical and economic knowledge to research projects and real-world applications.
 </p>
+
+</div>
+
 </div>
 
 <div class="section" id="education">
+
 <h2>EDUCATION</h2>
 
 <p><b>Foreign Trade University (FTU)</b><br>
@@ -173,17 +195,19 @@ Math-specialized class</p>
 </div>
 
 <div class="section" id="skills">
+
 <h2>SKILLS</h2>
 
 <p><b>Technical Skills:</b> Microsoft Office Specialists (MOS) in Microsoft Excel, Microsoft Word, Microsoft PowerPoint.</p>
 
-<p><b>Soft Skills:</b> Research skills, Critical thinking, Problem-solving, Time management, Team collaboration, Communication skills.</p>
+<p><b>Soft skills:</b> Research skills, Critical thinking, Problem-solving, Time management, Team collaboration, Communication skills.</p>
 
 <p><b>Languages:</b> Vietnamese (Native), English.</p>
 
 </div>
 
 <div class="section" id="work">
+
 <h2>WORK EXPERIENCE</h2>
 
 <p><b>Maths Tutor</b></p>
@@ -196,6 +220,7 @@ Math-specialized class</p>
 </div>
 
 <div class="section" id="activities">
+
 <h2>EXTRACURRICULAR ACTIVITIES</h2>
 
 <p><b>Global Economic Club (GEC), Foreign Trade University</b><br>
@@ -209,6 +234,7 @@ Member of Human Resources Department<br>
 </div>
 
 <div class="section" id="qualities">
+
 <h2>PERSONAL QUALITIES</h2>
 
 <ul>
@@ -220,6 +246,7 @@ Member of Human Resources Department<br>
 </div>
 
 <div class="section" id="idols">
+
 <h2>MY IDOLS</h2>
 
 <div class="slider">
@@ -242,6 +269,7 @@ Member of Human Resources Department<br>
 </div>
 
 <div class="section" id="contact">
+
 <h2>CONTACT</h2>
 
 <p>Email: nguyenthithuyha02468@gmail.com</p>
