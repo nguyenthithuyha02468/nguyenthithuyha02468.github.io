@@ -17,14 +17,14 @@ scroll-behavior:smooth;
 overflow-x:hidden;
 }
 
-/* hover ảnh */
+/* hover image */
 
 img:hover{
 transform:scale(1.05);
 transition:0.3s;
 }
 
-/* background nơ */
+/* bow background */
 
 .bow{
 position:fixed;
@@ -52,41 +52,28 @@ z-index:100;
 nav{
 max-width:1100px;
 margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-/* name */
-
-.namebox{
-background:white;
-padding:8px 18px;
-border-radius:20px;
-font-weight:500;
 }
 
 /* menu */
 
-nav ul{
+.menu{
 list-style:none;
 display:flex;
-gap:20px;
+justify-content:space-between;
+align-items:center;
 margin:0;
 padding:0;
 }
 
-nav a{
+.menu a{
 color:white;
 text-decoration:none;
 font-size:14px;
 transition:0.25s;
 }
 
-/* hiệu ứng chọn */
-
-nav a:hover{
-transform:scale(1.2);
+.menu a:hover{
+transform:scale(1.15);
 font-weight:500;
 }
 
@@ -101,6 +88,7 @@ padding-top:120px;
 /* section */
 
 .section{
+scroll-margin-top:120px;
 background:white;
 border-radius:14px;
 padding:30px;
@@ -115,7 +103,7 @@ padding-bottom:8px;
 margin-bottom:20px;
 }
 
-/* viền màu */
+/* border colors */
 
 .profilebox{border:2px solid #ffc9c9;}
 .edu{border:2px solid #ffe9a8;}
@@ -147,7 +135,7 @@ border:4px solid #ff8ec4;
 box-shadow:0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* qualities icon */
+/* qualities */
 
 .qualities ul{
 list-style:none;
@@ -171,12 +159,16 @@ border-radius:10px;
 
 .slides{
 display:flex;
+width:300%;
 transition:0.5s;
 }
 
 .slides img{
 width:100%;
+flex-shrink:0;
 }
+
+/* buttons */
 
 .buttons{
 text-align:center;
@@ -212,9 +204,8 @@ background:#ff3c87;
 
 <nav>
 
-<div class="namebox">Nguyễn Thị Thúy Hà</div>
-
-<ul>
+<ul class="menu">
+<li><a href="#profile">Nguyễn Thị Thúy Hà</a></li>
 <li><a href="#profile">Profile</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -351,6 +342,7 @@ HR Department Member<br>
 
 let index=0
 const slide=document.getElementById("slide")
+const total=3
 
 function show(){
 slide.style.transform="translateX("+(-index*100)+"%)"
@@ -358,13 +350,13 @@ slide.style.transform="translateX("+(-index*100)+"%)"
 
 function next(){
 index++
-if(index>2) index=0
+if(index>=total) index=0
 show()
 }
 
 function prev(){
 index--
-if(index<0) index=2
+if(index<0) index=total-1
 show()
 }
 
