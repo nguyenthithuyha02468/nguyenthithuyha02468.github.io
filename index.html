@@ -17,14 +17,14 @@ scroll-behavior:smooth;
 overflow-x:hidden;
 }
 
-/* hover image */
+/* hover ảnh */
 
 img:hover{
 transform:scale(1.05);
 transition:0.3s;
 }
 
-/* bow background */
+/* background nơ */
 
 .bow{
 position:fixed;
@@ -103,7 +103,7 @@ padding-bottom:8px;
 margin-bottom:20px;
 }
 
-/* border colors */
+/* viền màu */
 
 .profilebox{border:2px solid #ffc9c9;}
 .edu{border:2px solid #ffe9a8;}
@@ -155,17 +155,17 @@ content:"✨ ";
 .slider{
 overflow:hidden;
 border-radius:10px;
+width:100%;
 }
 
 .slides{
 display:flex;
-width:300%;
 transition:0.5s;
 }
 
 .slides img{
 width:100%;
-flex-shrink:0;
+flex:0 0 100%;
 }
 
 /* buttons */
@@ -340,23 +340,27 @@ HR Department Member<br>
 
 <script>
 
-let index=0
-const slide=document.getElementById("slide")
-const total=3
+let index = 0
+const slide = document.getElementById("slide")
+const total = slide.children.length
 
 function show(){
-slide.style.transform="translateX("+(-index*100)+"%)"
+slide.style.transform = "translateX(" + (-index*100) + "%)"
 }
 
 function next(){
 index++
-if(index>=total) index=0
+if(index >= total){
+index = 0
+}
 show()
 }
 
 function prev(){
 index--
-if(index<0) index=total-1
+if(index < 0){
+index = total - 1
+}
 show()
 }
 
